@@ -100,3 +100,4 @@ function add(accumulator, currentValue) {
 }
 let sum = numbers.reduce(add);
 ```
+![](/img/visualise%20method.pdf)
