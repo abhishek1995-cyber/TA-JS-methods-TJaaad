@@ -1,35 +1,98 @@
 // NOTE: You can not use reduce methods to solve this exercise
 
-function countAllPeople() {
-  // your code goes here
+function countAllPeople(count) {
+  let total = 0;
+  got.houses.forEach(house => {
+    total += house.people.length
+  })
+  return total;
 }
 
 function peopleByHouses() {
-  // your code goes here
+  let final = {}
+  got.houses.forEach(n=>{
+    final[n.name] = n.people.length
+  })
+  return final
 }
 
 function everyone() {
-  // your code goes here
+  let final = [];
+
+  got.houses.forEach(house=>{
+   let peopleName = house.people.map(
+     (person) => person.name);
+     final = final.concat(peopleName)
+  });
+  return final
 }
 
 function nameWithS() {
-  // your code goes here
+  let final = [];
+
+  got.houses.forEach(house=>{
+    let peopleName = house.people.filter(
+      (person) =>{
+      if(person.name.includes('s')){
+        final.push(person.name)
+      }
+      })
+   });
+   return final
 }
 
 function nameWithA() {
-  // your code goes here
+  let final = [];
+
+  got.houses.forEach(house=>{
+    let peopleName = house.people.filter(
+      (person) =>{
+      if(person.name.includes('a')){
+        final.push(person.name)
+      }
+      })
+   });
+   return final
 }
+
 
 function surnameWithS() {
-  // your code goes here
+  let final = [];
+
+  got.houses.forEach(house=>{
+    let peopleName = house.people.filter(
+      (person) =>{
+      if(person.name.split(' ')[1].startsWith('S')){
+        final.push(person.name)
+      }
+      })
+   });
+   return final
 }
 
+
 function surnameWithA() {
-  // your code goes here
+  let final = [];
+
+  got.houses.forEach(house=>{
+    let peopleName = house.people.filter(
+      (person) =>{
+      if(person.name.split(' ')[1].startsWith('A')){
+        final.push(person.name)
+      }
+      })
+   });
+   return final
 }
 
 function peopleNameOfAllHouses() {
-  // your code goes here
+  let final = {}
+  got.houses.forEach(house=>{
+    final[house.name] = house.people.map(h => {
+      return h.name;
+    })
+  })
+  return final
 }
 
 // Testing your result after writing your function
